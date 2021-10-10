@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lej en bil | Solbiler ApS</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="banner">
+        <h1>Solbiler ApS</h1>
+        <div id="login">
+          <i class="fa fa-user-circle"></i>
+          <p>Log Ind</p>
+        </div>
+      </div>
+    </header>
+    <main id="content">
+      <div id="head1">
+        <div id="forsidetop">
+          <form id="soegbil">
+            <h2>Find bilen som passer til dig</h2>
+
+            <label for="start">Jeg henter den:</label>
+            <input type="date" id="start" name="trip-start" required />
+            <label for="slut">Jeg afleverer den:</label>
+            <input type="date" id="slut" name="trip-end" required />
+
+            <label for="persons">Antal personer:</label>
+            <select id="persons" name="persons">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+
+            <label for="baggage">Antal kufferter:</label>
+            <select id="baggage" name="baggage">
+              <option value="0">0 - kun taske</option>
+              <option value="1">1 kuffert</option>
+              <option value="2">2 kufferter</option>
+              <option value="3">3 kufferter</option>
+              <option value="4">4 kufferter</option>
+            </select>
+
+            <button id="soegbilknap" type="submit">Søg</button>
+          </form>
+        </div>
+      </div>
+      <div id="output" class="fleksboks"></div>
+      <template id="biler_output">
+        <figure class="figur">
+          <img class="bilbillede" />
+          <div class="model"></div>
+          <div class="bilinfo">
+            <div class="kategori">Kategori:&nbsp;</div>
+            <div class="personer">Max personer:&nbsp;</div>
+            <div class="kufferter">Kufferter:&nbsp;</div>
+          </div>
+          <div class="prisogbook">
+            <div class="pris">DKK&nbsp;</div>
+            <button class="bookknap">Book nu</button>
+          </div>
+        </figure>
+      </template>
+    </main>
+    <footer></footer>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>

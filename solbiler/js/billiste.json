@@ -1,0 +1,28 @@
+{
+    "billiste": [
+      {
+        "billedefil": "images/citroen.png",
+        "model": "Citroen C1",
+        "kategori": "Budget",
+        "personer": 4,
+        "kufferter": 0,
+        "pris": 0
+      },
+      {
+        "billedefil": "images/megane.png",
+        "model": "Renault Megane",
+        "kategori": "Mellemklasse",
+        "personer": 5,
+        "kufferter": 3,
+        "pris": 60
+      },
+      {
+        "billedefil": "images/multivan.png",
+        "model": "VW Multivan",
+        "kategori": "Minivan",
+        "personer": 7,
+        "kufferter": 4,
+        "pris": 105
+      }
+    ]
+  }

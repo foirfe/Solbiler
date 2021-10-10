@@ -1,0 +1,112 @@
+#banner {
+  background-color: rgb(203, 223, 28);
+  display: flex;
+  justify-content: space-evenly;
+}
+.fa fa-user-circle {
+  text-align: center;
+}
+#banner h1 {
+  font-family: "Sigmar One", cursive;
+  font-size: 2em;
+  margin-left: 2%;
+  padding-top: 1%;
+}
+#login {
+  display: inline-flex;
+  text-align: right;
+  margin-right: 2%;
+  padding-top: 1%;
+  font-size: 1.2em;
+}
+#head1 {
+  position: relative;
+}
+#forsidetop {
+  width: 100%;
+  background-image: url(../images/bilisolen.jpg);
+  background-size: cover;
+  padding-top: 40%;
+  height: 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#soegbil {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  padding: 1% 2% 0 2%;
+  color: white;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.5);
+  height: auto;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+#soegbil h2 {
+  text-align: center;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+#soegbilknap {
+  margin: 0 25% 0 25%;
+  width: 50%;
+}
+.personogkuffert {
+  text-align: center;
+}
+.figur {
+  margin: 2% 10% 0 10%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.bilbillede {
+  width: 20%;
+}
+.model {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+form#soegbil {
+  padding: 2%;
+}
+
+#soegbil label {
+  text-decoration: underline;
+}
+.pris {
+  font-size: 2em;
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.bookknap {
+  margin-top: 20%;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: rgb(77, 69, 5);
+  color: white;
+  box-shadow: 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  cursor: pointer;
+}
+.bookknap:hover {
+  background-color: rgb(250, 214, 10);
+  color: black;
+  transform: scale(1.1);
+  transition: transform 0.3s, background-color 10s ease, color 5s;
+}
+
+input {
+  margin: 2% 0 2% 0;
+}
+
+select {
+  margin: 2% 0 2% 0;
+}
