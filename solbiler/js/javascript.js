@@ -16,8 +16,8 @@ fetch("js/billiste.json")
   const baggage = document.getElementById("baggage");
   const startdato = document.getElementById('start');
   const slutdato = document.getElementById('slut');
-  const soegbil = document.getElementById("soegbil")
-
+  const soegbil = document.getElementById("soegbil");
+  const bookknap = document.getElementsByClassName("bookknap"); 
   
  soegbil.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -35,6 +35,7 @@ for (const bil of biliste)
     const personer = klon.querySelector(".personer");
     const kufferter = klon.querySelector(".kufferter");
     const pris = klon.querySelector(".pris");
+    const link = klon.querySelector(".bookknap")
 
     billedetag.src = bil.billedefil;
     model.textContent += bil.model;
@@ -42,6 +43,7 @@ for (const bil of biliste)
     personer.textContent += bil.personer;
     kufferter.textContent += bil.kufferter;
     pris.textContent += beregnLejeudgift(antaldage, bil.pris);
+    link.href = 'ekstra.html?bil=${bil.model}&afhentning=${rejsestart.value}&aflevering${rejseslut}'
     output.appendChild(klon);
 }
     } else {alert("Der var du lige for hurtig! Afhentingsdato kan ikke ligge senere end afleveringsdato");}
@@ -75,3 +77,4 @@ return prisialt.toFixed(2);}
 var today = new Date().toISOString().split('T')[0]; // Gør at man ikke kan gå længere tilbage end i dag.
 document.getElementsByName("trip-start")[0].setAttribute('min', today);
 document.getElementsByName("trip-end")[0].setAttribute('min', today);
+
