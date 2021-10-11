@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Jeg har ikke taget udgangspunkt i Viewports men mere fokus på javascripten, siden fungerer bedst på PC skærm */
 /* Eric Meyer's CSS Reset */
 html,
@@ -137,9 +138,23 @@ header #banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1%;
+}
+
+header #banner a {
+  color: black;
+  text-decoration: none;
+}
+
+header #banner a:hover {
+  color: #f59f00;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 header .fa fa-user-circle {
@@ -149,8 +164,7 @@ header .fa fa-user-circle {
 header #banner h1 {
   font-family: "Sigmar One", cursive;
   font-size: 2em;
-  margin-left: 2%;
-  padding-top: 1%;
+  padding-top: 5%;
 }
 
 header #login {
@@ -159,12 +173,26 @@ header #login {
   display: inline-flex;
   text-align: right;
   margin-right: 2%;
-  padding-top: 1%;
   font-size: 1.2em;
 }
 
 header #head1 {
   position: relative;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: black;
+  color: white;
+  font-size: 1.25em;
+}
+
+footer a {
+  color: white;
 }
 
 #page__index #forsidetop {
@@ -183,8 +211,8 @@ header #head1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 3px solid white;
   padding: 1% 2% 0 2%;
   color: white;
@@ -218,11 +246,11 @@ header #head1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -251,7 +279,7 @@ header #head1 {
   font-weight: bold;
   text-decoration: underline;
   -webkit-text-decoration-color: black;
-  text-decoration-color: black;
+          text-decoration-color: black;
 }
 
 #page__index .prisogbook {
@@ -259,8 +287,8 @@ header #head1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #page__index .bookknap {
@@ -281,13 +309,11 @@ header #head1 {
   background-color: #fad60a;
   color: black;
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: background-color 10s ease, color 5s,
-    -webkit-transform 0.3s;
+          transform: scale(1.1);
+  -webkit-transition: background-color 10s ease, color 5s, -webkit-transform 0.3s;
   transition: background-color 10s ease, color 5s, -webkit-transform 0.3s;
   transition: transform 0.3s, background-color 10s ease, color 5s;
-  transition: transform 0.3s, background-color 10s ease, color 5s,
-    -webkit-transform 0.3s;
+  transition: transform 0.3s, background-color 10s ease, color 5s, -webkit-transform 0.3s;
 }
 
 #page__index input {
@@ -314,8 +340,8 @@ header #head1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #page__ekstra #valgtebil h2 {
