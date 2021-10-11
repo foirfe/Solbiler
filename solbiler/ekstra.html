@@ -36,37 +36,57 @@
         <div id="ekstraoutput"></div>
         <div id="valgtebilbillede"></div>
       </div>
+      <h1>Har du brug for ekstra udstyr?</h1>
       <form>
-        <h1>Har du brug for ekstra udstyr?</h1>
-        <input
-          type="checkbox"
-          data-udstyr="Ekstra chauffør"
-          value="199"
-        />Ekstra chauffør kr. 199
-        <input
-          type="checkbox"
-          data-udstyr="Barnesæde(5-10år)"
-          value="155"
-        />Barnesæde(5-10år) kr. 155
-        <input
-          type="checkbox"
-          data-udstyr="Barnesæde(1-4år)"
-          value="140"
-        />Barnesæde(1-4år) kr. 148
-        <input type="checkbox" data-udstyr="GPS navigation" value="250" />GPS
-        navigation kr. 255
-        <input type="checkbox" data-udstyr="Vejhjælp" value="120" />Vejhjælp+
-        kr. 120
-        <input type="checkbox" data-udstyr="Snekæder" value="188" />Snekæder kr.
-        188
-        <input
-          type="checkbox"
-          data-udstyr="Liftnet"
-          value="100"
-        />Liftnet(0-1år) kr. 100
-        <button type="submit">Videre</button>
+        <div id="ekstraudstyr">
+          <div class="check">
+            <input type="checkbox" data-udstyr="Ekstra chauffør" value="199" />
+            Ekstra chauffør kr. 199
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              data-udstyr="Barnesæde(5-10år)"
+              value="155"
+            />
+            Sæde(5-10år) kr. 155
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              data-udstyr="Barnesæde(1-4år)"
+              value="140"
+            />Barnesæde(1-4år) kr. 148
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              data-udstyr="GPS navigation"
+              value="250"
+            />GPS navigation kr. 255
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              data-udstyr="Vejhjælp"
+              value="120"
+            />Vejhjælp+ kr. 120
+          </div>
+          <div class="check">
+            <input type="checkbox" data-udstyr="Snekæder" value="188" />Snekæder
+            kr. 188
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              data-udstyr="Liftnet"
+              value="100"
+            />Liftnet(0-1år) kr. 100
+          </div>
+          <button type="submit">Videre</button>
+        </div>
+        <div id="totalprisplusudstyr">PLACEHOLDER</div>
       </form>
-      <div id="totalprisplusudstyr"></div>
     </main>
     <footer>
       <p>Solbiler Aps&copy; 2019-2021</p>
