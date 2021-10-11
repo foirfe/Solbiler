@@ -1,28 +1,172 @@
-#banner {
-  background-color: rgb(203, 223, 28);
-  display: flex;
-  justify-content: space-evenly;
+/* Eric Meyer's CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-.fa fa-user-circle {
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+header #banner {
+  background-color: #cbdf1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .fa fa-user-circle {
   text-align: center;
 }
-#banner h1 {
+
+header #banner h1 {
   font-family: "Sigmar One", cursive;
   font-size: 2em;
   margin-left: 2%;
   padding-top: 1%;
 }
-#login {
+
+header #login {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-align: right;
   margin-right: 2%;
   padding-top: 1%;
   font-size: 1.2em;
 }
-#head1 {
+
+header #head1 {
   position: relative;
 }
-#forsidetop {
+
+#page__index #forsidetop {
   width: 100%;
   background-image: url(../images/bilisolen.jpg);
   background-size: cover;
@@ -31,9 +175,15 @@
   background-repeat: no-repeat;
   position: relative;
 }
-#soegbil {
+
+#page__index #soegbil {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 3px solid white;
   padding: 1% 2% 0 2%;
   color: white;
@@ -44,69 +194,89 @@
   left: 5%;
   top: 30%;
 }
-#soegbil h2 {
+
+#page__index #soegbil h2 {
   text-align: center;
   margin-bottom: 5%;
   font-weight: bold;
 }
-#soegbilknap {
+
+#page__index #soegbilknap {
   margin: 0 25% 0 25%;
   width: 50%;
 }
-.personogkuffert {
+
+#page__index .personogkuffert {
   text-align: center;
 }
-.figur {
+
+#page__index .figur {
   margin: 2% 10% 0 10%;
   border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(0, 0, 0, 0.5);
 }
-.bilbillede {
+
+#page__index .bilbillede {
   width: 20%;
 }
-.model {
+
+#page__index .model {
   font-size: 2em;
   text-align: center;
   font-weight: bold;
 }
 
-form#soegbil {
+#page__index form#soegbil {
   padding: 2%;
 }
 
-#soegbil label {
+#page__index #soegbil label {
   text-decoration: underline;
 }
-.pris {
+
+#page__index .pris {
   font-size: 2em;
   color: red;
   font-weight: bold;
   text-decoration: underline;
-  text-decoration-color: black;
+  -webkit-text-decoration-color: black;
+          text-decoration-color: black;
 }
-.bookknap {
+
+#page__index .bookknap {
   margin-top: 20%;
   font-size: 1.5em;
   font-weight: bold;
-  background-color: rgb(77, 69, 5);
+  background-color: #4d4505;
   color: white;
-  box-shadow: 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
   cursor: pointer;
 }
-.bookknap:hover {
-  background-color: rgb(250, 214, 10);
+
+#page__index .bookknap:hover {
+  background-color: #fad60a;
   color: black;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: background-color 10s ease, color 5s, -webkit-transform 0.3s;
+  transition: background-color 10s ease, color 5s, -webkit-transform 0.3s;
   transition: transform 0.3s, background-color 10s ease, color 5s;
+  transition: transform 0.3s, background-color 10s ease, color 5s, -webkit-transform 0.3s;
 }
 
-input {
+#page__index input {
   margin: 2% 0 2% 0;
 }
 
-select {
+#page__index select {
   margin: 2% 0 2% 0;
 }
+/*# sourceMappingURL=style.css.map */
