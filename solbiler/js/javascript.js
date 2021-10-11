@@ -43,7 +43,7 @@ for (const bil of biliste)
     personer.textContent += bil.personer;
     kufferter.textContent += bil.kufferter;
     pris.textContent += beregnLejeudgift(antaldage, bil.pris);
-    link.href = 'ekstra.html?bil=${bil.model}&afhentning=${rejsestart.value}&aflevering${rejseslut}'
+    link.href = `ekstra.html?bil=${bil.model}&afhentning=${startdato.value}&aflevering=${slutdato.value}&lejedage=${antaldage}&lejeudgift=${beregnLejeudgift(antaldage, bil.pris)}`;
     output.appendChild(klon);
 }
     } else {alert("Der var du lige for hurtig! Afhentingsdato kan ikke ligge senere end afleveringsdato");}
@@ -77,4 +77,5 @@ return prisialt.toFixed(2);}
 var today = new Date().toISOString().split('T')[0]; // Gør at man ikke kan gå længere tilbage end i dag.
 document.getElementsByName("trip-start")[0].setAttribute('min', today);
 document.getElementsByName("trip-end")[0].setAttribute('min', today);
+
 

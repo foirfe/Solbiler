@@ -58,14 +58,24 @@
     text-decoration: underline;
   }
   .pris {
+    margin-right: 10%;
     font-size: 2em;
     color: red;
     font-weight: bold;
     text-decoration: underline;
     text-decoration-color: black;
   }
+  .prisogbook {
+    display: flex;
+    align-items: center;
+  }
   .bookknap {
-    margin-top: 20%;
+    text-decoration: none;
+    padding: 5px 6px 2px 6px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #cccccc;
     font-size: 1.5em;
     font-weight: bold;
     background-color: rgb(77, 69, 5);

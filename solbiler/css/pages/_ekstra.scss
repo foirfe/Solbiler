@@ -5,4 +5,26 @@
     font-size: 1.5em;
     text-align: center;
   }
+  #valgtebil {
+    padding: 2%;
+    margin: 2% 10% 0 10%;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      font-family: "Sigmar One", cursive;
+      text-align: center;
+      font-size: 3em;
+      padding-top: 1.5%;
+    }
+    #ekstraoutput {
+      font-size: 1.5em;
+      color: white;
+    }
+  }
+  img {
+    width: 50%;
+    margin: 0 25% 0 25%;
+  }
 }
