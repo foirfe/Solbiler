@@ -401,4 +401,13 @@ footer a {
   color: white;
   cursor: pointer;
 }
+
+#page__ekstra #totalprisplusudstyr {
+  color: white;
+  font-size: 2.5em;
+  font-family: "Sigmar One", cursive;
+  background: red;
+  height: 20%;
+  margin-top: 5%;
+}
 /*# sourceMappingURL=style.css.map */

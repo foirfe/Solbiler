@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/reset.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -24,14 +23,73 @@
   <body>
     <header>
       <div id="banner">
-        <h1>Solbiler ApS</h1>
+        <a href="index.html"><h1>Solbiler ApS</h1></a>
         <div id="login">
           <i class="fa fa-user-circle"></i>
           <p>Log Ind</p>
         </div>
       </div>
     </header>
-    <main id="pages__personal"></main>
+    <main id="pages__personal">
+      <div id="oplysninger">
+        <form id="dineoplysninger">
+          <label for="firstname">Navn:</label><br />
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Indtast dit navn"
+            required
+          /><br />
+          <label for="lastname">Efternavn:</label><br />
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Indtast dit efternavn"
+            required
+          /><br />
+          <label for="address">Adresse:</label><br />
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Indtast din addresse"
+            required
+          /><br />
+          <label for="zip">Postnummer:</label><br />
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            placeholder="Indtast dit postnummer"
+            required
+          /><br />
+          <label for="email">Email:</label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Indast din email"
+            required
+          /><br />
+          <label for="tel">Mobilnr:</label><br />
+          <input
+            type="text"
+            id="tel"
+            name="tel"
+            placeholder="Indtast dit mobilnummer"
+            required
+          /><br />
+          <button type="submit">Videre</button>
+        </form>
+      </div>
+      <h2 id="modelnavn"></h2>
+      <div id="prisforbilen"></div>
+      <div id="udstyrvalgt">Du har valgt følgende udstyr:<br /></div>
+      <div id="afhentningogaflevering"></div>
+      <div id="totalprisnu"></div>
+    </main>
     <footer>
       <p>Solbiler Aps&copy; 2019-2021</p>
       <a href="">Om os</a>
