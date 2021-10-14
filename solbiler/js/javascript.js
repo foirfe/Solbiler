@@ -17,8 +17,6 @@ fetch("js/billiste.json")
   const startdato = document.getElementById('start');
   const slutdato = document.getElementById('slut');
   const soegbil = document.getElementById("soegbil");
-  const bookknap = document.getElementsByClassName("bookknap"); 
-
 
 
  soegbil.addEventListener("submit", function (event) {
@@ -37,8 +35,10 @@ for (const bil of biliste)
     const personer = klon.querySelector(".personer");
     const kufferter = klon.querySelector(".kufferter");
     const pris = klon.querySelector(".pris");
-    const link = klon.querySelector(".bookknap")
-    const modullink = klon.querySelector(".infoknap")
+    const link = klon.querySelector(".bookknap");
+    const modullink = klon.querySelector(".infoknap");
+    const closebtn = document.querySelector(".btn-close")
+
     
 let modalselect = bil.modal
     billedetag.src = bil.billedefil;
@@ -50,9 +50,44 @@ let modalselect = bil.modal
     link.href = `ekstra.html?bil=${bil.model}&afhentning=${startdato.value}&aflevering=${slutdato.value}&lejedage=${antaldage}&lejeudgift=${beregnLejeudgift(antaldage, bil.pris)}`;
     modullink.setAttribute("data-target", modalselect);//gør så den dynamisk skifter data-target på hver bil så der kan åbnes forskellige modal
     output.appendChild(klon);
+  
+    modullink.addEventListener("click", function(e){ //Gør at når man trykker på mere info at den finder hvilken modal den er sat til og åbner den
+    e.preventDefault();
+    var modal = modullink.getAttribute('data-target');
+    document.getElementById(modal).style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+    })
+    
+    closebtn.addEventListener(
+      "click",
+      function(event) {
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        if (
+          event.target.matches(".btn-close") ||
+        !event.target.closest(".modal")
+        ) {
+          closeModal()
+        }
+      },
+      false
+    )
+    
+    function closeModal() {
+      let close = modullink.getAttribute('data-target');
+      document.getElementById(close).style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+      document.getElementById("overlay").style.display = "none"
+    }
+
+
 }
     } else {alert("Der var du lige for hurtig! Afhentingsdato kan ikke ligge senere end afleveringsdato");}
   })}
+
+
+
+ 
+
 
   function validDatoer(startdato, slutdato) {
     const rejsestart = new Date(startdato);
@@ -62,7 +97,9 @@ let modalselect = bil.modal
     } else {
         return true;
     }
+
 }
+
 
 function beregnAntalLejedage(startdato, slutdato){
     const rejsestart = new Date(startdato);
@@ -101,15 +138,6 @@ function showReviews() {
 
 
 
-//Var begyndt på at prøve at køre forskellige modaler efter hvilken bil blev valgt men fik ikke så meget ud af det, rester af koden ligger tilbage, og i CSS hvis jeg skulle
-//få lyst til at kigge på det senere
 
-var btns = document.querySelectorAll("[data-target]");
 
-btns.forEach(function(btn){
-  btn.onClick(function(){
-    var modal = btn.getAttribute('data-target');
-    document.getElementById(modal).style.display = "block";
-  })
-})
 

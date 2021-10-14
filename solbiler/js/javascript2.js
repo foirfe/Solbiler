@@ -58,6 +58,7 @@ let currenttotal = parseInt(lejeudgiften);//Skifter det fra string til integer s
       sessionStorage.setItem("udstyr", JSON.stringify(udstyrliste));
       sessionStorage.setItem("totalpris", (total+currenttotal).toLocaleString("da-DK", {style: "currency", currency: "DKK"}));
       sessionStorage.setItem("biludlejning", currenttotal.toLocaleString("da-DK", {style: "currency", currency: "DKK"}));
+      sessionStorage.setItem("udstyrpris", total.toLocaleString("da-DK", {style: "currency", currency: "DKK"}));
       sessionStorage.setItem("modelnavn", modelnavn);
       sessionStorage.setItem("afhentningen", afhentning);
       sessionStorage.setItem("afleveringen", aflevering);

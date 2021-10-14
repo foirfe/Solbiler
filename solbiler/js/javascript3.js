@@ -6,11 +6,13 @@ const udstyrvalgt = document.getElementById("udstyrvalgt");
 const udstyrliste = JSON.parse(sessionStorage.getItem("udstyr"));
 const afhentingogaflevering = document.getElementById("afhentningogaflevering");
 const bilbillede = document.getElementById("bilbillede") //Tilknytter alt til javascripten fra html
+const prisforudstyr = document.getElementById("prisforudstyr")
 
 for(const udstyr of udstyrliste){
     udstyrvalgt.insertAdjacentHTML("beforeend", `${udstyr}<br>`);
-}
 
+}
+prisforudstyr.innerHTML =  "Pris for udstyr: " + sessionStorage.getItem("udstyrpris")
 modelnavn.innerHTML = sessionStorage.getItem("modelnavn");
 prisforbilen.innerHTML = "Prisen for udlejning af bilen er " + sessionStorage.getItem("biludlejning");
 afhentingogaflevering.innerHTML = "Du har valgt at afhente bilen den: " + sessionStorage.getItem("afhentningen") + 
