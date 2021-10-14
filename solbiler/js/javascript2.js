@@ -5,6 +5,8 @@ const valgtebilnavn = document.getElementById("valgtebilnavn");
 const ekstraoutput = document.getElementById("ekstraoutput");
 const valgtebilbillede = document.getElementById("valgtebilbillede")
 
+
+
 valgtebilnavn.innerHTML = URLDATA.get('bil');// Navn på bil efter hvad der står i URL
 ekstraoutput.innerHTML = "Du henter bilen den: " + URLDATA.get("afhentning") + "<br>og du aflever bilen den: " // Mere url data der bliver printet ud efter valg fra forrige side
  + URLDATA.get("aflevering") + "<br>Antal lejedage: " + URLDATA.get("lejedage") + "<br>Lejepris for bilen er: " + URLDATA.get("lejeudgift");
@@ -51,6 +53,8 @@ let currenttotal = parseInt(lejeudgiften);//Skifter det fra string til integer s
               udstyrliste.push(checkboks.dataset.udstyr);
           }
       }
+
+      
       sessionStorage.setItem("udstyr", JSON.stringify(udstyrliste));
       sessionStorage.setItem("totalpris", (total+currenttotal).toLocaleString("da-DK", {style: "currency", currency: "DKK"}));
       sessionStorage.setItem("biludlejning", currenttotal.toLocaleString("da-DK", {style: "currency", currency: "DKK"}));

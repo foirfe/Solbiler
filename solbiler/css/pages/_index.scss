@@ -20,6 +20,9 @@
     position: absolute;
     left: 5%;
     top: 30%;
+    label {
+      margin-bottom: 2%;
+    }
   }
   #soegbil h2 {
     text-align: center;
@@ -32,6 +35,41 @@
   }
   .personogkuffert {
     text-align: center;
+  }
+  .reviewslides {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 15%;
+    right: 5%;
+    font-size: 2.5em;
+    font-family: "Sigmar One", cursive;
+  }
+  .myReviews {
+    display: none;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3.5s;
+    animation-name: fade;
+    animation-duration: 3.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .figur {
     margin: 2% 10% 0 10%;
@@ -95,5 +133,67 @@
 
   select {
     margin: 2% 0 2% 0;
+  }
+  .infoknap {
+    text-decoration: none;
+    margin-left: 2%;
+    padding: 5px 6px 2px 6px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #cccccc;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    &:active {
+      transform: (0.9);
+    }
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+  }
+  .btn-close {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+  }
+  .modal {
+    width: 450px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(250, 214, 10);
+    z-index: 2;
+    display: none;
+  }
+
+  .modalheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #ccc;
+    font-family: "Sigmar One", cursive;
+  }
+  .modalbody {
+    padding: 1em;
+  }
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #overlay.active {
+    display: block;
   }
 }

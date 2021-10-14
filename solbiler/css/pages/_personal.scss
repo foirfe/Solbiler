@@ -1,0 +1,91 @@
+#pages__personal {
+  form {
+    font-family: "Sigmar One", cursive;
+  }
+  #oplysninger {
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+  }
+  #dineoplysninger {
+    background-color: red;
+    text-align: center;
+    margin-top: 4%;
+    input {
+      margin: 6% 0 4% 0;
+    }
+    label {
+      color: white;
+    }
+  }
+  #biloplysninger {
+    background-color: red;
+    color: white;
+    font-family: "Sigmar One", cursive;
+    font-size: 1.2em;
+    width: 35%;
+    h2 {
+      font-size: 2.5em;
+      text-align: center;
+    }
+  }
+  button {
+    margin: 1% 0 2% 0;
+    text-decoration: none;
+    padding: 5px 6px 2px 6px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #cccccc;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #4d4505;
+    color: white;
+    cursor: pointer;
+  }
+  #prisforbilen {
+    margin: 2% 0 2% 0;
+  }
+  #udstyrvalgt {
+    margin: 2% 0 2% 0;
+    text-align: right;
+  }
+  #afhentningogaflevering {
+    margin: 2% 0 2% 0;
+    text-align: left;
+  }
+  #totalprisnu {
+    margin: 2% 0 2% 0;
+    display: inline;
+    float: right;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+  .mySlides {
+    display: none;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

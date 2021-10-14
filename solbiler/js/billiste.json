@@ -6,7 +6,8 @@
         "kategori": "Budget",
         "personer": 4,
         "kufferter": 0,
-        "pris": 0
+        "pris": 0,
+        "modal": "modal1"
       },
       {
         "billedefil": "images/megane.png",
@@ -14,7 +15,8 @@
         "kategori": "Mellemklasse",
         "personer": 5,
         "kufferter": 3,
-        "pris": 60
+        "pris": 60,
+        "modal": "modal2"
       },
       {
         "billedefil": "images/multivan.png",
@@ -22,7 +24,8 @@
         "kategori": "Minivan",
         "personer": 7,
         "kufferter": 4,
-        "pris": 105
+        "pris": 105,
+        "modal": "modal3"
       }
     ]
   }

@@ -224,6 +224,10 @@ footer a {
   top: 30%;
 }
 
+#page__index #soegbil label {
+  margin-bottom: 2%;
+}
+
 #page__index #soegbil h2 {
   text-align: center;
   margin-bottom: 5%;
@@ -237,6 +241,44 @@ footer a {
 
 #page__index .personogkuffert {
   text-align: center;
+}
+
+#page__index .reviewslides {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 15%;
+  right: 5%;
+  font-size: 2.5em;
+  font-family: "Sigmar One", cursive;
+}
+
+#page__index .myReviews {
+  display: none;
+}
+
+#page__index .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #page__index .figur {
@@ -324,11 +366,94 @@ footer a {
   margin: 2% 0 2% 0;
 }
 
+#page__index .infoknap {
+  text-decoration: none;
+  margin-left: 2%;
+  padding: 5px 6px 2px 6px;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #cccccc;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+#page__index .infoknap:active {
+  -webkit-transform: 0.9;
+          transform: 0.9;
+}
+
+#page__index .infoknap:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+#page__index .btn-close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+}
+
+#page__index .modal {
+  width: 450px;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fad60a;
+  z-index: 2;
+  display: none;
+}
+
+#page__index .modalheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #ccc;
+  font-family: "Sigmar One", cursive;
+}
+
+#page__index .modalbody {
+  padding: 1em;
+}
+
+#page__index #overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#page__index #overlay.active {
+  display: block;
+}
+
 #page__ekstra h1 {
   margin-top: 2%;
   font-family: "Sigmar One", cursive;
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
+  background-color: #cbdf1c;
 }
 
 #page__ekstra #valgtebil {
@@ -409,5 +534,144 @@ footer a {
   background: red;
   height: 20%;
   margin-top: 5%;
+}
+
+#pages__personal form {
+  font-family: "Sigmar One", cursive;
+}
+
+#pages__personal #oplysninger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: red;
+}
+
+#pages__personal #dineoplysninger {
+  background-color: red;
+  text-align: center;
+  margin-top: 4%;
+}
+
+#pages__personal #dineoplysninger input {
+  margin: 6% 0 4% 0;
+}
+
+#pages__personal #dineoplysninger label {
+  color: white;
+}
+
+#pages__personal #biloplysninger {
+  background-color: red;
+  color: white;
+  font-family: "Sigmar One", cursive;
+  font-size: 1.2em;
+  width: 35%;
+}
+
+#pages__personal #biloplysninger h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#pages__personal button {
+  margin: 1% 0 2% 0;
+  text-decoration: none;
+  padding: 5px 6px 2px 6px;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #cccccc;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #4d4505;
+  color: white;
+  cursor: pointer;
+}
+
+#pages__personal #prisforbilen {
+  margin: 2% 0 2% 0;
+}
+
+#pages__personal #udstyrvalgt {
+  margin: 2% 0 2% 0;
+  text-align: right;
+}
+
+#pages__personal #afhentningogaflevering {
+  margin: 2% 0 2% 0;
+  text-align: left;
+}
+
+#pages__personal #totalprisnu {
+  margin: 2% 0 2% 0;
+  display: inline;
+  float: right;
+  text-decoration: underline;
+  -webkit-text-decoration-color: black;
+          text-decoration-color: black;
+}
+
+#pages__personal .mySlides {
+  display: none;
+}
+
+#pages__personal .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#pages__confirm #kvittering {
+  text-align: center;
+  font-family: "Sigmar One", cursive;
+  background-color: red;
+  color: white;
+  font-size: 1.5em;
+  padding: 2%;
+}
+
+#pages__confirm #kvittering h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1% 0 1% 0;
+}
+
+#pages__confirm #kvittering h2 {
+  text-decoration: underline;
+  font-size: 1.75em;
+  margin-bottom: 2%;
+}
+
+#pages__confirm #altinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#pages__confirm #sentinfo {
+  background-color: #fad60a;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
