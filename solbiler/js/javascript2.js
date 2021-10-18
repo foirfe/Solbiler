@@ -37,6 +37,7 @@ let currenttotal = parseInt(lejeudgiften);//Skifter det fra string til integer s
       const totalpris = document.getElementById("totalprisplusudstyr");
       totalpris.innerHTML = `Total pris <br> inkl. moms: ${(total+currenttotal).toLocaleString("da-DK", {style: "currency", currency: "DKK"})}`;
   }
+  
 
   let modelnavn = URLDATA.get('bil');
   let afhentning = URLDATA.get("afhentning");

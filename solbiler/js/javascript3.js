@@ -1,3 +1,18 @@
+fetch("https://api.dataforsyningen.dk/postnumre")
+.then(function(data){
+  return data.json();
+})
+.then(function(post){
+  const PBliste = document.getElementById("pbliste");
+  for (const postnrogby of post) {
+    PBliste.insertAdjacentHTML("beforeend", "<option>" + postnrogby.nr + " " + postnrogby.navn + "</option>");
+  }
+})
+.catch(function(error)
+{const PB = document.getElementById("postnummer")
+PB.innerHTML = "Postnr og by ikke tilgængelige";}
+)
+
 const dinevalg = document.getElementById("dinevalg");
 const modelnavn = document.getElementById("modelnavn");
 const totalprisnu = document.getElementById("totalprisnu");
@@ -27,14 +42,14 @@ formular.addEventListener("submit", function (e){
 const fornavn = document.getElementById("firstname").value;
 const efternavn = document.getElementById("lastname").value;
     const adresse = document.getElementById("address").value;
-    const zip = document.getElementById("zip").value;
+    const zip = document.getElementById("postnummer").value;
     const email = document.getElementById("email").value;
     const tel = document.getElementById("tel").value;
 
     sessionStorage.setItem("fornavn", fornavn);
     sessionStorage.setItem("efternavn", efternavn);
     sessionStorage.setItem("adresse", adresse);
-    sessionStorage.setItem("zip", zip);
+    sessionStorage.setItem("postnummer", zip);
     sessionStorage.setItem("email", email);
     sessionStorage.setItem("tel", tel);
     document.location.href = "confirm.html";

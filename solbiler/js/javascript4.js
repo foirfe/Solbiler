@@ -21,6 +21,6 @@ personaloutput.innerHTML = "Tak for din bestilling " + sessionStorage.getItem("f
 "<br>Om ikke så længe modtager du en kvittering på din bestilling på  " + sessionStorage.getItem("email"); //Sessionstorage og besked om kvittering
 
 sentinfo.innerHTML = "Tjek om du har indsendt de rigtige oplysninger her:<br> " + "<br>Navn: " + sessionStorage.getItem("fornavn") + " " + sessionStorage.getItem("efternavn") + 
-"<br>Adresse: " + sessionStorage.getItem("adresse") + "<br>Postnummer: " + sessionStorage.getItem("zip") + "<br>Email: " + sessionStorage.getItem("email") + "<br>Mobilnummer: "
+"<br>Adresse: " + sessionStorage.getItem("adresse") + "<br>Postnummer: " + sessionStorage.getItem("postnummer") + "<br>Email: " + sessionStorage.getItem("email") + "<br>Mobilnummer: "
 + sessionStorage.getItem("tel"); //Oplysninger fra tidligere bliver taget fra session storage
     

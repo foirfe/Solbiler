@@ -2,7 +2,7 @@
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <title>Lej en bil | Solbiler ApS</title>
+    <title>Personlige Oplysninger | Solbiler ApS</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -69,14 +69,16 @@
             name="address"
             placeholder="Indtast din addresse"
             required
+            list="adresseliste"
           /><br />
-          <label for="zip">Postnummer:</label><br />
+          <label for="zip">Postnummer og By:</label><br />
           <input
             type="text"
-            id="zip"
             name="zip"
             placeholder="Indtast dit postnummer"
             required
+            id="postnummer"
+            list="pbliste"
           /><br />
           <label for="email">Email:</label><br />
           <input
@@ -109,10 +111,11 @@
           <div id="bilbillede"></div>
         </div>
       </div>
+      <datalist id="pbliste"></datalist>
     </main>
     <footer>
       <p>Solbiler Aps&copy; 2019-2021</p>
-      <a href="">Om os</a>
+      <a href="omos.html">Om os</a>
     </footer>
     <script src="js/javascript3.js"></script>
   </body>

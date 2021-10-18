@@ -61,7 +61,7 @@ let modalselect = bil.modal
     closebtn.addEventListener(
       "click",
       function(event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        // Prøvede at få den til at fungere men den lukker kun første modal
         if (
           event.target.matches(".btn-close") ||
         !event.target.closest(".modal")
@@ -73,8 +73,8 @@ let modalselect = bil.modal
     )
     
     function closeModal() {
-      let close = modullink.getAttribute('data-target');
-      document.getElementById(close).style.display = "none";
+      document.getElementById("modal1").style.display = "none";
+      document.getElementById("modal2").style.display = "none";
   document.getElementById("overlay").style.display = "none";
       document.getElementById("overlay").style.display = "none"
     }
