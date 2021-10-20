@@ -51,7 +51,7 @@ let modalselect = bil.modal
     modullink.setAttribute("data-target", modalselect);//gør så den dynamisk skifter data-target på hver bil så der kan åbnes forskellige modal
     output.appendChild(klon);
   
-    modullink.addEventListener("click", function(e){ //Gør at når man trykker på mere info at den finder hvilken modal den er sat til og åbner den
+    modullink.addEventListener("click", function(e){ //Gør at når man trykker på mere info at den finder hvilken modal den er sat til og åbner den, har stadig ikke fundet ud af at lukke den
     e.preventDefault();
     var modal = modullink.getAttribute('data-target');
     document.getElementById(modal).style.display = "block";

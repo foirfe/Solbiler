@@ -1,4 +1,4 @@
-let observer = new IntersectionObserver((entries,observer) => {
+let observer = new IntersectionObserver((entries,observer) => { //Her laver jeg intersection observer som skal se om et objekt er i viewporten
     for (const infobox1 of entries){
         if (infobox1.isIntersecting){
             hvemervitext.classList.add("tracking-in-contract-bck-bottom")
